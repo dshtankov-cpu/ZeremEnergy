@@ -28,9 +28,14 @@ npm start
 ## Структура
 
 - `app/page.tsx` — главная страница и данные секций.
+- `app/services/` — отдельные индексируемые страницы услуг.
+- `app/robots.ts` и `app/sitemap.ts` — управление обходом и карта сайта.
+- `app/not-found.tsx` — брендированная страница 404.
 - `app/globals.css` — Tailwind, визуальные токены, desktop/mobile стили.
 - `app/layout.tsx` — язык и SEO metadata.
 - `components/Header.tsx` — логотип и адаптивная навигация.
+- `components/ServicePage.tsx` — общий шаблон страниц услуг и хлебных крошек.
+- `docs/seo/README.md` — карта запросов и план SEO-работ.
 - `public/images/` — локальная оригинальная иллюстрация.
 - `public/project-brief.txt` — скачиваемый бриф.
 

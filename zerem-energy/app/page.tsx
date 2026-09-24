@@ -1,5 +1,8 @@
-import Header, { Logo } from '@/components/Header';
+import Header from '@/components/Header';
 import MotionObserver from '@/components/MotionObserver';
+import Footer from '@/components/Footer';
+import JsonLd from '@/components/JsonLd';
+import { organization, siteUrl } from '@/lib/site';
 
 const solutions = [
   ['01', 'Generator Rental', 'Industrial power from 100 kVA.', 'Diesel generators and synchronized multi-unit systems configured around your load, voltage and operating schedule.'],
@@ -44,8 +47,13 @@ const faqs = [
 ];
 
 export default function Home() {
+  const structuredData = [
+    { '@context': 'https://schema.org', '@type': 'Organization', ...organization, areaServed: { '@type': 'Country', name: 'Israel' }, knowsAbout: ['Industrial generator rental', 'Temporary power systems', 'Diesel generators', 'Generator synchronization', 'Power distribution', 'Fuel management', 'Power system operation and maintenance'] },
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: organization.name, url: siteUrl, inLanguage: 'en' },
+  ];
   return <>
     <MotionObserver />
+    <JsonLd data={structuredData} />
     <a className="skip-link" href="#main">Skip to content</a>
     <Header />
     <main id="main">
@@ -101,7 +109,7 @@ export default function Home() {
             {solutions.map(([id, title, subtitle, body]) => <article className="solution-card" data-reveal key={id}>
               <div className="card-top"><span className="solution-symbol" aria-hidden="true">{id === '01' ? 'ϟ' : id === '02' ? '◈' : id === '03' ? '☼' : '⌘'}</span><span>{id}</span></div>
               <h3>{title}</h3><p className="card-subtitle">{subtitle}</p><p>{body}</p>
-              <a href="#contact" aria-label={`Discuss ${title}`}>Discuss your project <span>↗</span></a>
+              <a href={id === '01' ? '/services/generator-rental' : id === '02' ? '/services/temporary-power' : '#contact'} aria-label={`Explore ${title}`}>{id === '01' || id === '02' ? 'Explore service' : 'Discuss your project'} <span>↗</span></a>
             </article>)}
           </div>
         </div>
@@ -218,17 +226,7 @@ export default function Home() {
       </section>
     </main>
 
-    <footer>
-      <div className="container">
-        <div className="footer-main">
-          <div><a href="#" aria-label="Zerem Energy home"><Logo dark /></a><p>Generator rental and complete power solutions across Israel.</p></div>
-          <div><h4>Explore</h4><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#equipment">Equipment</a><a href="#process">How it works</a></div>
-          <div><h4>Company</h4><a href="#about">About Zerem</a><a href="#faq">FAQ</a><a href="#contact">Project enquiries</a></div>
-          <div><h4>Contact</h4><a href="mailto:hello@zerem-energy.example">hello@zerem-energy.example</a><a href="tel:+97230000000">+972 3 000 0000</a><p>Tel Aviv-Yafo, Israel</p></div>
-        </div>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} Zerem Energy. All rights reserved.</span><span>Industrial generator rental · Israel</span><a href="#">Back to top ↑</a></div>
-      </div>
-    </footer>
+    <Footer />
     <a className="mobile-sticky-cta" href="#contact">Request a Quote <span>↗</span></a>
   </>;
 }
