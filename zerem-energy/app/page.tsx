@@ -184,9 +184,34 @@ export default function Home() {
       </section>
 
       <section id="contact" className="contact">
-        <div className="container contact-inner">
-          <div><p className="eyebrow">RELIABLE POWER. ANYWHERE IN ISRAEL.</p><h2>Let’s power<br />your project.</h2><p>Tell us your required capacity, project location and rental duration.</p></div>
-          <div className="contact-action"><a href="/project-brief.txt" download="Zerem-Energy-Project-Brief.txt" className="button dark">Prepare your project brief <span>↗</span></a><p>Download a brief to outline your load, location and operating requirements.</p></div>
+        <div className="container contact-grid">
+          <div className="contact-copy">
+            <p className="eyebrow">RELIABLE POWER. ANYWHERE IN ISRAEL.</p>
+            <h2>Let’s power<br />your project.</h2>
+            <p>Tell us your required capacity, project location and rental duration.</p>
+            <div className="contact-details">
+              <div><span>Email</span><a href="mailto:hello@zerem-energy.example">hello@zerem-energy.example</a></div>
+              <div><span>Phone</span><a href="tel:+97230000000">+972 3 000 0000</a></div>
+              <div><span>Office</span><p>123 Example Street<br />Tel Aviv-Yafo, Israel</p></div>
+            </div>
+            <p className="contact-placeholder-note">Temporary demonstration details — to be replaced before final launch.</p>
+          </div>
+          <div className="quote-panel">
+            <div className="quote-panel-heading"><span>PROJECT ENQUIRY</span><strong>Tell us what you need.</strong></div>
+            <form className="quote-form" aria-describedby="quote-form-status">
+              <label>Full name<input type="text" name="name" placeholder="Your name" /></label>
+              <label>Company<input type="text" name="company" placeholder="Company name" /></label>
+              <label>Email or phone<input type="text" name="contact" placeholder="How should we contact you?" /></label>
+              <div className="quote-form-row">
+                <label>Required capacity<input type="text" name="capacity" placeholder="e.g. 500 kVA" /></label>
+                <label>Project location<input type="text" name="location" placeholder="City / region" /></label>
+              </div>
+              <label>Project details<textarea name="details" rows={4} placeholder="Application, start date, duration and operating hours" /></label>
+              <button type="button" className="button dark" disabled>Submit request <span>↗</span></button>
+              <p id="quote-form-status">Online submission will be activated when the final company email is connected.</p>
+            </form>
+            <a href="/project-brief.txt" download="Zerem-Energy-Project-Brief.txt" className="download-brief">Download the detailed project brief <span>↓</span></a>
+          </div>
         </div>
       </section>
     </main>
@@ -197,7 +222,7 @@ export default function Home() {
           <div><a href="#" aria-label="Zerem Energy home"><Logo dark /></a><p>Generator rental and complete power solutions across Israel.</p></div>
           <div><h4>Explore</h4><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#equipment">Equipment</a><a href="#process">How it works</a></div>
           <div><h4>Company</h4><a href="#about">About Zerem</a><a href="#faq">FAQ</a><a href="#contact">Project enquiries</a></div>
-          <div><h4>Our focus</h4><p>100 kVA to multi-megawatt<br />Industrial power across Israel</p></div>
+          <div><h4>Contact</h4><a href="mailto:hello@zerem-energy.example">hello@zerem-energy.example</a><a href="tel:+97230000000">+972 3 000 0000</a><p>Tel Aviv-Yafo, Israel</p></div>
         </div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Zerem Energy. All rights reserved.</span><span>Industrial generator rental · Israel</span><a href="#">Back to top ↑</a></div>
       </div>
