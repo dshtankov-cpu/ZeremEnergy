@@ -132,7 +132,7 @@ export default function Home() {
             <p>Different sites and loads require different configurations. Every solution starts with the project itself.</p>
           </div>
           <div className="industry-grid reveal-stagger">
-            {industries.map(([id, name, description]) => <a className="industry-card" data-reveal href="#contact" key={id}>
+            {industries.map(([id, name, description]) => <a className="industry-card" data-reveal href={`/industries/${['construction', 'manufacturing', 'infrastructure', 'commercial-facilities', 'data-centers', 'energy-utilities'][Number(id) - 1]}`} key={id}>
               <div><span className="index">{id}</span><span className="industry-arrow">↗</span></div>
               <h3>{name}</h3><p>{description}</p>
             </a>)}

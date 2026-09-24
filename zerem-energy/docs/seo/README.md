@@ -19,6 +19,13 @@
 | `/solutions` | power solutions Israel | generator rental, temporary power, gas and hybrid power, EPC, O&M |
 | `/services/generator-rental` | industrial generator rental Israel | diesel generator rental, 100 kVA, multi-megawatt generators |
 | `/services/temporary-power` | temporary power solutions Israel | construction power, planned maintenance power, temporary distribution |
+| `/industries` | power solutions by industry Israel | construction, manufacturing, infrastructure, commercial, data centers, utilities |
+| `/industries/construction` | temporary power for construction sites Israel | construction generator rental, cranes, site distribution |
+| `/industries/manufacturing` | industrial power for manufacturing Israel | factory generator rental, planned maintenance, additional capacity |
+| `/industries/infrastructure` | temporary power for infrastructure Israel | project generators, utility and transport projects |
+| `/industries/commercial-facilities` | generator rental for commercial facilities Israel | offices, warehouses, retail and building power |
+| `/industries/data-centers` | temporary power for data centers Israel | critical loads, synchronized generation, project capacity |
+| `/industries/energy-utilities` | temporary generation for energy and utilities Israel | multi-megawatt power, additional capacity, distribution |
 
 ## Generator rental content coverage
 
