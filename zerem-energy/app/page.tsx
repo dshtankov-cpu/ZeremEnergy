@@ -1,4 +1,5 @@
 import Header, { Logo } from '@/components/Header';
+import MotionObserver from '@/components/MotionObserver';
 
 const solutions = [
   ['01', 'Generator Rental', 'Industrial power from 100 kVA.', 'Diesel generators and synchronized multi-unit systems configured around your load, voltage and operating schedule.'],
@@ -44,6 +45,7 @@ const faqs = [
 
 export default function Home() {
   return <>
+    <MotionObserver />
     <a className="skip-link" href="#main">Skip to content</a>
     <Header />
     <main id="main">
@@ -65,23 +67,23 @@ export default function Home() {
       </section>
 
       <section className="stats" aria-label="Power capabilities">
-        <div className="container stats-grid">
+        <div className="container stats-grid reveal-stagger">
           {[
             ['100 kVA', 'Starting capacity'],
             ['Multi-MW', 'Scalable power systems'],
             ['All Israel', 'Nationwide project coverage'],
             ['Full Service', 'From delivery to support'],
-          ].map(([value, label]) => <div key={value}><strong>{value}</strong><span>{label}</span></div>)}
+          ].map(([value, label]) => <div data-reveal key={value}><strong>{value}</strong><span>{label}</span></div>)}
         </div>
       </section>
 
       <section id="generator-rental" className="section intro-section">
         <div className="container intro-grid">
-          <div>
+          <div data-reveal>
             <p className="eyebrow">GENERATOR RENTAL IN ISRAEL</p>
             <h2>Reliable power.<br />Engineered around your project.</h2>
           </div>
-          <div className="intro-copy">
+          <div className="intro-copy" data-reveal>
             <p>Zerem Energy provides industrial generator rental and integrated power solutions throughout Israel. We support construction sites, industrial facilities, infrastructure projects, commercial operations, planned maintenance and emergency power requirements.</p>
             <p>Every project begins with the actual electrical load. We consider starting currents, peak demand, voltage, operating hours, available fuel, site conditions and future expansion before configuring the system.</p>
             <p>Our team can manage the complete process — from assessment and equipment selection to transportation, installation, commissioning, fuel supply, maintenance and operational support.</p>
@@ -91,12 +93,12 @@ export default function Home() {
 
       <section id="solutions" className="section solutions-section">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-reveal>
             <div><p className="eyebrow">01 / OUR SOLUTIONS</p><h2>Power systems.<br />Built around your load.</h2></div>
             <p>From an individual industrial generator to a synchronized multi-megawatt installation.</p>
           </div>
-          <div className="solutions-grid">
-            {solutions.map(([id, title, subtitle, body]) => <article className="solution-card" key={id}>
+          <div className="solutions-grid reveal-stagger">
+            {solutions.map(([id, title, subtitle, body]) => <article className="solution-card" data-reveal key={id}>
               <div className="card-top"><span className="solution-symbol" aria-hidden="true">{id === '01' ? 'ϟ' : id === '02' ? '◈' : id === '03' ? '☼' : '⌘'}</span><span>{id}</span></div>
               <h3>{title}</h3><p className="card-subtitle">{subtitle}</p><p>{body}</p>
               <a href="#contact" aria-label={`Discuss ${title}`}>Discuss your project <span>↗</span></a>
@@ -107,7 +109,7 @@ export default function Home() {
 
       <section id="about" className="scale-section">
         <div className="scale-image" />
-        <div className="container scale-content">
+        <div className="container scale-content" data-reveal>
           <p className="eyebrow light">INDUSTRIAL GENERATOR RENTAL</p>
           <h2>From 100 kVA to<br /><em>Multi-Megawatt</em><br />Power Systems.</h2>
           <p>For larger loads, multiple generators can be synchronized to operate as one coordinated power plant. This creates a scalable system that can adapt as demand changes and support planned maintenance without shutting down the complete installation.</p>
@@ -117,12 +119,12 @@ export default function Home() {
 
       <section id="industries" className="section industries">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-reveal>
             <div><p className="eyebrow">02 / INDUSTRIES WE SERVE</p><h2>Power for critical operations.</h2></div>
             <p>Different sites and loads require different configurations. Every solution starts with the project itself.</p>
           </div>
-          <div className="industry-grid">
-            {industries.map(([id, name, description]) => <a className="industry-card" href="#contact" key={id}>
+          <div className="industry-grid reveal-stagger">
+            {industries.map(([id, name, description]) => <a className="industry-card" data-reveal href="#contact" key={id}>
               <div><span className="index">{id}</span><span className="industry-arrow">↗</span></div>
               <h3>{name}</h3><p>{description}</p>
             </a>)}
@@ -132,14 +134,14 @@ export default function Home() {
 
       <section id="equipment" className="section equipment">
         <div className="container equipment-grid">
-          <div>
+          <div data-reveal>
             <p className="eyebrow">03 / COMPLETE POWER PACKAGE</p>
             <h2>More than<br />a generator.</h2>
             <p className="equipment-intro">A reliable temporary power system depends on correct sizing, distribution, fuel planning, installation and maintenance. We bring these elements together in one coordinated package.</p>
             <a href="#contact" className="button dark">Configure your system <span>↗</span></a>
             <div className="equipment-note"><span>100 kVA → MULTI-MW</span><p>Individual units. Integrated systems.<br />One connected solution.</p></div>
           </div>
-          <div className="equipment-list">
+          <div className="equipment-list" data-reveal>
             {equipment.map(([id, title, description]) => <details key={id}>
               <summary><span className="index">{id}</span><h3>{title}</h3><span className="plus">+</span></summary>
               <div className="equipment-detail"><p>{description}</p><a href="#contact">Discuss equipment requirements ↗</a></div>
@@ -150,11 +152,11 @@ export default function Home() {
 
       <section id="process" className="section process-section">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-reveal>
             <div><p className="eyebrow">04 / HOW IT WORKS</p><h2>From load assessment<br />to energization.</h2></div>
             <p>A clear process keeps the technical scope, responsibilities and project schedule aligned.</p>
           </div>
-          <div className="process-grid">
+          <div className="process-grid" data-reveal>
             {process.map(([id, title, body]) => <article className="process-card" key={id}><span>{id}</span><h3>{title}</h3><p>{body}</p></article>)}
           </div>
         </div>
@@ -162,11 +164,11 @@ export default function Home() {
 
       <section className="section coverage-section">
         <div className="container coverage-grid">
-          <div>
+          <div data-reveal>
             <p className="eyebrow light">NATIONWIDE PROJECT COVERAGE</p>
             <h2>Generator rental<br />across Israel.</h2>
           </div>
-          <div>
+          <div data-reveal>
             <p>Zerem Energy supports projects in every region of Israel — including central Israel, Tel Aviv and the surrounding area, Jerusalem, Haifa and northern Israel, as well as Be’er Sheva and southern Israel.</p>
             <p>Transportation, installation, commissioning, fuel supply, maintenance and technical support can be coordinated as one complete service package.</p>
             <a href="#contact" className="text-link">Discuss your project location <span>↗</span></a>
@@ -176,8 +178,8 @@ export default function Home() {
 
       <section id="faq" className="section faq-section">
         <div className="container faq-grid">
-          <div><p className="eyebrow">05 / FREQUENTLY ASKED QUESTIONS</p><h2>Planning your<br />power requirement.</h2></div>
-          <div className="faq-list">
+          <div data-reveal><p className="eyebrow">05 / FREQUENTLY ASKED QUESTIONS</p><h2>Planning your<br />power requirement.</h2></div>
+          <div className="faq-list" data-reveal>
             {faqs.map(([question, answer]) => <details key={question}><summary><h3>{question}</h3><span className="plus">+</span></summary><p>{answer}</p></details>)}
           </div>
         </div>
@@ -185,7 +187,7 @@ export default function Home() {
 
       <section id="contact" className="contact">
         <div className="container contact-grid">
-          <div className="contact-copy">
+          <div className="contact-copy" data-reveal>
             <p className="eyebrow">RELIABLE POWER. ANYWHERE IN ISRAEL.</p>
             <h2>Let’s power<br />your project.</h2>
             <p>Tell us your required capacity, project location and rental duration.</p>
@@ -196,7 +198,7 @@ export default function Home() {
             </div>
             <p className="contact-placeholder-note">Temporary demonstration details — to be replaced before final launch.</p>
           </div>
-          <div className="quote-panel">
+          <div className="quote-panel" data-reveal>
             <div className="quote-panel-heading"><span>PROJECT ENQUIRY</span><strong>Tell us what you need.</strong></div>
             <form className="quote-form" aria-describedby="quote-form-status">
               <label>Full name<input type="text" name="name" placeholder="Your name" /></label>
@@ -227,5 +229,6 @@ export default function Home() {
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Zerem Energy. All rights reserved.</span><span>Industrial generator rental · Israel</span><a href="#">Back to top ↑</a></div>
       </div>
     </footer>
+    <a className="mobile-sticky-cta" href="#contact">Request a Quote <span>↗</span></a>
   </>;
 }
