@@ -64,7 +64,7 @@ export default function Home() {
           <h1>Generator Rental.<br /><em>Complete Power Solutions.</em></h1>
           <p className="hero-description">Reliable temporary and permanent power systems from 100 kVA to multi-megawatt capacity — including delivery, installation, fuel supply, maintenance and technical support.</p>
           <div className="flex flex-wrap gap-3">
-            <a className="button" href="#solutions">Explore Solutions <span>↗</span></a>
+            <a className="button" href="/solutions">Explore Solutions <span>↗</span></a>
             <a className="button outline" href="#contact">Request a Quote <span>↗</span></a>
           </div>
           <div className="hero-bottom">
@@ -109,7 +109,7 @@ export default function Home() {
             {solutions.map(([id, title, subtitle, body]) => <article className="solution-card" data-reveal key={id}>
               <div className="card-top"><span className="solution-symbol" aria-hidden="true">{id === '01' ? 'ϟ' : id === '02' ? '◈' : id === '03' ? '☼' : '⌘'}</span><span>{id}</span></div>
               <h3>{title}</h3><p className="card-subtitle">{subtitle}</p><p>{body}</p>
-              <a href={id === '01' ? '/services/generator-rental' : id === '02' ? '/services/temporary-power' : '#contact'} aria-label={`Explore ${title}`}>{id === '01' || id === '02' ? 'Explore service' : 'Discuss your project'} <span>↗</span></a>
+              <a href={id === '01' ? '/services/generator-rental' : id === '02' ? '/services/temporary-power' : id === '03' ? '/solutions#gas-hybrid' : '/solutions#epc-om'} aria-label={`Explore ${title}`}>Explore service <span>↗</span></a>
             </article>)}
           </div>
         </div>

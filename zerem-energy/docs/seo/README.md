@@ -16,6 +16,7 @@
 | Page | Primary intent | Supporting topics |
 | --- | --- | --- |
 | `/` | Zerem Energy, industrial power solutions Israel | generator rental, temporary power, EPC, O&M |
+| `/solutions` | power solutions Israel | generator rental, temporary power, gas and hybrid power, EPC, O&M |
 | `/services/generator-rental` | industrial generator rental Israel | diesel generator rental, 100 kVA, multi-megawatt generators |
 | `/services/temporary-power` | temporary power solutions Israel | construction power, planned maintenance power, temporary distribution |
 
