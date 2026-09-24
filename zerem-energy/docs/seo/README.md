@@ -19,6 +19,21 @@
 | `/services/generator-rental` | industrial generator rental Israel | diesel generator rental, 100 kVA, multi-megawatt generators |
 | `/services/temporary-power` | temporary power solutions Israel | construction power, planned maintenance power, temporary distribution |
 
+## Generator rental content coverage
+
+The generator rental page owns the main commercial intent and should answer the questions a buyer needs before requesting a quotation:
+
+- available capacity and system types;
+- included equipment and operational support;
+- single-generator and synchronized configurations;
+- rental duration and project scheduling;
+- factors that determine generator rental cost;
+- industries and operating applications;
+- service coverage across Israel;
+- technical information required for a quotation.
+
+Create a separate page only when Zerem Energy can provide distinct, useful information for that service. Potential future pages include emergency power, industrial diesel generators and high-voltage temporary power, but each requires confirmed capabilities, response terms and technical evidence before publication.
+
 ## Next content priorities
 
 1. Confirm the legal company name, real address, phone, email and social profiles.
@@ -36,4 +51,5 @@
 - Avoid mass-producing near-duplicate city pages.
 - Give each page one distinct search intent and link it from relevant pages.
 - Prefer engineering detail, real examples, specifications and project evidence over repeated keyword phrases.
+- Use natural topic coverage instead of fixed keyword-density or exact-match repetition targets.
 - Keep structured data consistent with visible page content.
