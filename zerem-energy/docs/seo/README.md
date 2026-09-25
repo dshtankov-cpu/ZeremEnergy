@@ -26,6 +26,12 @@
 | `/industries/commercial-facilities` | generator rental for commercial facilities Israel | offices, warehouses, retail and building power |
 | `/industries/data-centers` | temporary power for data centers Israel | critical loads, synchronized generation, project capacity |
 | `/industries/energy-utilities` | temporary generation for energy and utilities Israel | multi-megawatt power, additional capacity, distribution |
+| `/equipment` | temporary power equipment Israel | generators, synchronization, transformers, cabling, fuel systems |
+| `/equipment/diesel-generators` | industrial diesel generators Israel | generator rental from 100 kVA, single and synchronized units |
+| `/equipment/synchronization-systems` | generator synchronization systems | parallel generators, load sharing, multi-megawatt systems |
+| `/equipment/transformers-distribution` | temporary power distribution Israel | transformers, distribution boards, electrical protection |
+| `/equipment/cables-connections` | temporary power cables Israel | industrial cabling, connectors, cable routing |
+| `/equipment/fuel-systems` | generator fuel systems Israel | fuel tanks, consumption planning, scheduled refueling |
 
 ## Generator rental content coverage
 

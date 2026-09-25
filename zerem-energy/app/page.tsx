@@ -152,7 +152,7 @@ export default function Home() {
           <div className="equipment-list" data-reveal>
             {equipment.map(([id, title, description]) => <details key={id}>
               <summary><span className="index">{id}</span><h3>{title}</h3><span className="plus">+</span></summary>
-              <div className="equipment-detail"><p>{description}</p><a href="#contact">Discuss equipment requirements ↗</a></div>
+              <div className="equipment-detail"><p>{description}</p><a href={`/equipment/${['diesel-generators', 'synchronization-systems', 'transformers-distribution', 'cables-connections', 'fuel-systems'][Number(id) - 1]}`}>Explore equipment ↗</a></div>
             </details>)}
           </div>
         </div>
